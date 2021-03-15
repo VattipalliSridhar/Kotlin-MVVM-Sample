@@ -7,6 +7,7 @@ import kotlinx.coroutines.withContext
 import retrofit2.Response
 
 class LoginRepository : SafeApiRequest() {
+
    suspend fun getLoginData(userName: String, passWord: String, apk: String): Response<LoginModelNew>? {
        return withContext(Dispatchers.IO) {
            RetrofitClient.apiInterface.login(userName, passWord, apk)

@@ -8,6 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.apps.kotlinmvvm.R
+import com.apps.kotlinmvvm.model.UserLoginModel
 import com.apps.kotlinmvvm.view.baseclass.BaseActivity
 import com.apps.kotlinmvvm.viewmodel.LoginViewModel
 
@@ -31,7 +32,8 @@ class MainActivity : BaseActivity() {
             showDialog()
 
 
-                loginViewModel!!.postLogin("testagency","testagency","1.0")
+
+                loginViewModel.postLogin("testagency","testagency","1.0")
 
         }
 

@@ -20,7 +20,7 @@ object RetrofitClient {
         okHttpClient.addInterceptor(logging)
 
         Retrofit.Builder()
-            .baseUrl(Constants.Base_Url)
+            .baseUrl(Constants.Base_Url2)
             .client(okHttpClient.build())
             .addConverterFactory(GsonConverterFactory.create())
     }

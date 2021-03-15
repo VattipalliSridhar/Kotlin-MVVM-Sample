@@ -1,15 +1,14 @@
 package com.apps.kotlinmvvm.view.api
 
 import com.apps.kotlinmvvm.model.LoginModelNew
-import com.apps.kotlinmvvm.view.baseclass.Constants
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
+import com.apps.kotlinmvvm.model.UserLogin
+import retrofit2.Call
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.Body
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
+
 
 interface ApiInterface {
 
@@ -23,7 +22,10 @@ interface ApiInterface {
     ): Response<LoginModelNew>
 
 
-    companion object{
+    @POST("logincheck")
+    fun getUserData(@Body userLogin: UserLogin?): Call<UserLogin?>?
+
+  /*  companion object{
         operator fun invoke() {
 
             val levelType: HttpLoggingInterceptor.Level =
@@ -42,6 +44,6 @@ interface ApiInterface {
                 .build()
                 .create(ApiInterface::class.java)
         }
-    }
+    }*/
 
 }

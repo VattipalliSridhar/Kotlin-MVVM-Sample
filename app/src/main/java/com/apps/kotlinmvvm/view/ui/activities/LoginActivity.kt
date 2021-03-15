@@ -6,7 +6,7 @@ import androidx.databinding.DataBindingUtil
 import com.apps.kotlinmvvm.R
 import com.apps.kotlinmvvm.databinding.ActivityLoginBinding
 
-class LoginActivity : AppCompatActivity() {
+class  LoginActivity : AppCompatActivity() {
 
 
     private lateinit var binding: ActivityLoginBinding
